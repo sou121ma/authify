@@ -13,7 +13,7 @@ public class Welcome {
     @GetMapping("/")
     public ResponseEntity<Void> redirectToSwagger() {
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(URI.create("/swagger-ui.html"));
+        headers.setLocation(URI.create("/swagger-ui/index.html"));
         return new ResponseEntity<>(headers, HttpStatus.FOUND);
     }
 }
